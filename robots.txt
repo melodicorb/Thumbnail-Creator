@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /config.js
+
+Sitemap: https://yourdomain.com/yttham/sitemap.xml

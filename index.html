@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>YouTube Thumbnail Maker - Free AI-Powered Thumbnail Creator</title>
+    <meta name="description" content="Create professional YouTube thumbnails with AI-powered background removal, multilingual text support, and custom stickers. Free online thumbnail maker with Bangla and Hindi support.">
+    <meta name="keywords" content="YouTube thumbnail maker, AI background removal, thumbnail creator, YouTube tools, Bangla text, Hindi text">
+    <meta name="author" content="YouTube Thumbnail Maker">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/yttham/">
+    <meta property="og:title" content="YouTube Thumbnail Maker - Free AI-Powered Creator">
+    <meta property="og:description" content="Create professional YouTube thumbnails with AI-powered tools. Free online thumbnail maker with multilingual support.">
+    <meta property="og:image" content="https://yourdomain.com/yttham/icons/thumbnail-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/yttham/">
+    <meta property="twitter:title" content="YouTube Thumbnail Maker - Free AI-Powered Creator">
+    <meta property="twitter:description" content="Create professional YouTube thumbnails with AI-powered tools. Free online thumbnail maker with multilingual support.">
+    <meta property="twitter:image" content="https://yourdomain.com/yttham/icons/thumbnail-preview.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/yttham/">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;700&family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Tiro+Devanagari+Hindi:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <link rel="icon" type="image/png" href="icons/ai-favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Remove AdSense until you have a valid ID -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
+     crossorigin="anonymous"></script> -->
+    <script type='text/javascript' src='//pl25374629.profitableratecpm.com/78/f5/37/78f5374996f288456eff4d21bf65b8af.js'></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <i class="fas fa-robot navbar-icon"></i>
+            <div class="navbar-brand">YouTube Thumbnail Creator</div>
+            <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Remove ad containers until AdSense is properly set up -->
+    <!-- <div class="ad-container top-ad">
+        <ins class="adsbygoogle"...></ins>
+    </div> -->
+
+    <div class="container">
+        <div class="sidebar">
+            <!-- Banner Ad above Tools heading -->
+            <div class="ad-container sidebar-banner-ad">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '182da7f266689536409dea72e1382db7',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/182da7f266689536409dea72e1382db7/invoke.js"></script>
+            </div>
+            <h2>Tools</h2>
+            <div class="tool-section">
+                <h3>Background</h3>
+                <input type="file" id="imageUpload" accept="image/jpeg,image/png,image/webp,image/gif" title="Upload Image">
+                <button id="removeBackground">Remove Background</button>
+                <button id="clearCanvas">Clear Canvas</button>
+            </div>
+            <div class="tool-section">
+                <h3>Text</h3>
+                <button id="addText">Add Text</button>
+                <textarea id="textInput" placeholder="Type your text here..." rows="3"></textarea>
+                <select id="fontFamily">
+                    <option value="Arial">Arial</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Hind Siliguri">Hind Siliguri (Bangla)</option>
+                    <option value="Noto Sans Bengali">Noto Sans Bengali</option>
+                    <option value="Tiro Devanagari Hindi">Tiro Devanagari Hindi</option>
+                    <option value="Poppins">Poppins</option>
+                </select>
+                <input type="color" id="textColor" value="#ffffff">
+                <input type="color" id="strokeColor" value="#000000">
+                <input type="number" id="strokeWidth" value="0" min="0" max="5">
+            </div>
+            <div class="tool-section">
+                <h3>Stickers</h3>
+                <div class="ai-sticker-controls">
+                    <input type="text" id="stickerPrompt" placeholder="Describe your sticker...">
+                    <button id="generateSticker">Generate AI Sticker</button>
+                </div>
+                <div id="stickerGallery">
+                    <!-- Stickers will be loaded here -->
+                </div>
+            </div>
+            <div class="tool-section">
+                <h3>Actions</h3>
+                <button id="saveDesign">Save Design</button>
+                <button id="loadDesign">Load Design</button>
+                <button id="downloadThumbnail">Download</button>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+
+    <!-- Remove sidebar ad container -->
+    <!-- <div class="ad-container sidebar-ad">
+        <ins class="adsbygoogle"...></ins>
+    </div> -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Footer Banner Ad -->
+            <div class="ad-container footer-banner-ad">
+                <script type="text/javascript">
+                	atOptions = {
+                	 	'key' : '84d2becca54905f09e3d854b0e3458b1',
+                		'format' : 'iframe',
+                		'height' : 90,
+                		'width' : 728,
+                		'params' : {}
+                	};
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/84d2becca54905f09e3d854b0e3458b1/invoke.js"></script>
+            </div>
+            <!-- Native Banner Ad -->
+            <div class="ad-container footer-banner-ad">
+                <script async="async" data-cfasync="false" src="//pl25374887.profitableratecpm.com/1133d001d70efa1ffc537eccb8b49bc0/invoke.js"></script>
+                <div id="container-1133d001d70efa1ffc537eccb8b49bc0"></div>
+            </div>
+            <!-- Social Bar Ad -->
+            <div class="ad-container footer-banner-ad">
+                <script type='text/javascript' src='//pl25374434.profitableratecpm.com/23/e5/49/23e549114bec76fcf7faa7390df325ac.js'></script>
+            </div>
+            <p>&copy; <span id="currentYear"></span> YouTube Thumbnail Maker. All rights reserved.</p>
+            <!-- Add structured data for SEO -->
+            <div itemscope itemtype="http://schema.org/WebApplication">
+                <meta itemprop="name" content="YouTube Thumbnail Maker">
+                <meta itemprop="description" content="AI-powered YouTube thumbnail creator">
+                <meta itemprop="applicationCategory" content="MultimediaApplication">
+                <meta itemprop="operatingSystem" content="Web Browser">
+                <meta itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <meta itemprop="price" content="0">
+                    <meta itemprop="priceCurrency" content="USD">
+                </meta>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Then load our scripts -->
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
